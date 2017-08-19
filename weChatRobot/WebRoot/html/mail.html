@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>雁书</title>
+	<style>
+		body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+		body{font-size:16px; font-family: "微软雅黑";background:#fff;-webkit-text-size-adjust:100%;color: #353535;overflow: hidden;}
+		a{color:#2d374b;text-decoration:none}
+		em{font-style:normal}
+		li{list-style:none}
+		img{border:0;vertical-align:middle}
+		table{border-collapse:collapse;border-spacing:0}
+		p{word-wrap:break-word}
+		h1,h2,h3,h4,h5,h6{font-weight: normal;}
+		html,body{height: 100%;}
+		#autoHide{background: url(../img/mail-bg.jpg) no-repeat;background-size: 100% 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 2222;}
+		#autoShow{background: url(../img/mail.jpg) no-repeat;background-size: 100% 100%;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: -1;}
+		input{font-size:16px;border: none;border-bottom: solid 1px #d7d7d7;background: transparent;padding: 5px;}
+		.to{width: 50%;position: absolute;top: 10px;left: 10px;}
+		.comment{font-family: "微软雅黑";font-size: 16px;background: transparent;width: 90%;border: none;resize: none;position: absolute;top: 60px;left: 10px;text-indent: 2em;}
+		.form{width: 20%;position: absolute;bottom: 100px;right: 10px;}
+		.send{border: none;background: darksalmon;color: white;padding: 10px 30px;margin: auto;transition: all 500ms;}
+		.send:active{background: coral;}
+	</style>
+	</head>
+	<body ontouchstart="toggleSound()">
+		<!-- <audio id="audio" src="http://www.w3school.com.cn/i/song.mp3"autoplay="autoplay"></audio> -->
+		<div id="autoHide"></div>
+		<div id="autoShow"></div>
+		<form action="" method="post">
+			<input type="text" class="to" name="formemail" placeholder="对方邮箱:"/>
+			<textarea class="comment" rows="5" name="message" placeholder="输入你想说的话"></textarea>
+			<input type="text" class="form" name="youremail" placeholder="来自：不输入系统默认***"/>
+			<div style="position: absolute;bottom: 20px;width: 100%;">
+				<div style="width: 88px;margin: auto;">
+				<button class="send">发送</button>								
+				</div>
+
+			</div>
+
+		</form>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#autoHide').fadeOut(3000),$('#autoShow').fadeIn(1500);
+		});
+		function toggleSound() {
+        	var music = document.getElementById("audio");//获取ID
+        	if (music.paused) { //判读是否播放
+                music.play(); //没有就播放
+        	}
+		}
+
+	</script>
+	</body>
+</html>

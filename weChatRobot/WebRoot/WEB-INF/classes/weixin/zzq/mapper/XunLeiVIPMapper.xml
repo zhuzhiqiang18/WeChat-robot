@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+  
+<mapper namespace="weixin.zzq.mapper.XunLeiVIPMapper">  
+ <resultMap type="weixin.zzq.model.XunLeiVIP" id="XunLeiVIP">  
+    <id column="id" jdbcType="INTEGER" property="id"/>  
+    <result column="vipContext" jdbcType="VARCHAR" property="vipContext"/>    
+    <result column="beizhu"    jdbcType="VARCHAR" property="beizhu"/>  
+     <result column="createTime"   jdbcType="DATE" property="createTime"/> 
+  </resultMap>    
+  
+  <select id="findById" parameterType="int" resultMap="XunLeiVIP">  
+    select id,,vipContext,beizhu,createTime from XunLeiVIP where ID=#{_parameter}  
+  </select> 
+  
+   <select id="findAll" resultMap="XunLeiVIP">  
+    select id,vipContext,beizhu,createTime from XunLeiVIP 
+  </select>   
+    
+    <select id="OrderByIdDasc" resultMap="XunLeiVIP">  
+    select id,vipContext,beizhu,createTime from XunLeiVIP order by id desc
+  </select> 
+  
+  <insert id="save" parameterType="XunLeiVIP">  
+  insert into XunLeiVIP(vipContext,beizhu,createTime) values(#{vipContext},#{beizhu},#{createTime})  
+  </insert> 
+   
+  <!-- <delete id="deleteID" parameterType="int">  
+    delete from Student where ID = #{id}  
+  </delete> -->  
+</mapper>  

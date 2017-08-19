@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	  	<style type="text/css">
+	  	body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+		body{font-size:14px; font-family: "微软雅黑";background:#fff;-webkit-text-size-adjust:100%;color: #353535;}
+		a{color:#2d374b;text-decoration:none}
+		em{font-style:normal}
+		li{list-style:none}
+		img{border:0;vertical-align:middle}
+		table{border-collapse:collapse;border-spacing:0}
+		p{word-wrap:break-word}
+		h1,h2,h3,h4,h5,h6{font-weight: normal;}
+		body{background: url(../img/bg.jpg);background-size: cover;background-repeat: no-repeat;}
+	  	.container{width: 100%;height: 100%;}
+	  	.input{width: 70%;margin: auto;margin-top: 100px;text-align: center;}
+	  	.input span{display: block;padding-bottom: 10px;font-size: 20px;color: white;}
+	  	.input input{text-align: center;width: 100%;padding: 15px 20px;font-size: 16px;background: white;border: solid 1px #ccc;border-radius: 23px;box-sizing: border-box;}
+	  	.input button{margin-top: 30px;padding: 15px 0; text-align: center;width: 70%;border-radius: 5px;border: solid 1px rgb(215,4,25);background: white;color: rgb(215,4,25);font-size: 16px;transition: all 500ms;}
+	  	.input button:active{width: 100%;background: rgb(215,4,25);color: white;}
+	  	.masking{text-align:center;width: 100%;height: 100%;position: fixed;top: 0;bottom: 0;left: 0;right: 0;background:white;display: none;}
+	  	.massage{width: 100%;}
+	  	.massage p{text-align: center;}
+	  	.massage p:first-child{font-size: 30px;}
+	  	.massage p:last-child a{display: block;color: rgb(215,4,25);margin-top: 10px;font-size: 20px;}
+	  	</style>
+	   	
+	</head>
+	<body>
+		<div class="container">
+			<div class="input">
+				<span>输口令&nbsp;&nbsp;领奖励</span>
+				<input type="text"/>
+				<button id="show">点击领取奖励</button>
+			</div>
+		</div>
+		<div class="masking"></div>
+		<!--未中奖-->
+		<!--<div class="masking">
+			<img src="img/1.jpg" width="70%"/>
+			<div class="massage">
+				<p>没有中奖哟</p>
+				<p><a href="#">兑奖码输错了？</a></p>
+			</div>
+		</div>-->
+		<!--中奖-->
+		<!--<div class="masking">
+			<img src="img/2.jpg" width="70%"/>
+			<div class="massage">
+				<p>恭喜你中奖了</p>
+				<p><a href="#">还有兑奖码？</a></p>
+			</div>
+		</div>-->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('#show').click(function(){
+			  	var html;
+				html+="<img src='"+图片地址+"' width='70%'/>";
+				html+="<div class='massage'>"
+				html+="<p>"+是否中奖+"</p>"
+				html+="<p><a href='#'>"+是否返回+"</a></p>"
+				$(".masking").html(html);
+				$(".masking").show();
+			  })
+			  $(".masking").click(function(){
+			  	$(".masking").hide();
+			  })
+			});
+
+		</script>
+	</body>
+</html>

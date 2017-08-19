@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+  
+<mapper namespace="weixin.zzq.mapper.EmailMapper">  
+ <resultMap type="weixin.zzq.model.Email" id="Email">  
+    <id column="ID" jdbcType="INTEGER" property="id"/>  
+    <result column="YOUREMAIL" jdbcType="VARCHAR" property="youremail"/>  
+    <result column="FORMEMAIL" jdbcType="VARCHAR" property="formemail"/>  
+    <result column="MESSAGE"   jdbcType="VARCHAR" property="message"/>  
+    <result column="BEIZHU"    jdbcType="VARCHAR" property="beizhu"/>  
+    <result column="DINGSHI"   jdbcType="VARCHAR" property="dingshi"/> 
+     <result column="CREATETIME"   jdbcType="DATE" property="createTime"/> 
+  </resultMap>    
+  
+  <select id="selectID" parameterType="int" resultMap="Email">  
+    select ID,YOUREMAIL,FORMEMAIL,MESSAGE,BEIZHU,DINGSHI,CREATETIME from Email where ID=#{_parameter}  
+  </select> 
+  
+   <select id="selectWhereDingshi" parameterType="String" resultMap="Email">  
+    select ID,YOUREMAIL,FORMEMAIL,MESSAGE,BEIZHU,DINGSHI,CREATETIME from Email where ID=#{dingshi}  
+  </select> 
+  
+   <select id="selectWhereBeizhu" parameterType="String" resultMap="Email">  
+    select ID,YOUREMAIL,FORMEMAIL,MESSAGE,BEIZHU,DINGSHI,CREATETIME from Email where ID=#{beizhu}  
+  </select> 
+  
+   <select id="findAll" resultMap="Email">  
+    select ID,YOUREMAIL,FORMEMAIL,MESSAGE,BEIZHU,DINGSHI,CREATETIME from Email 
+  </select>   
+    
+  <insert id="save" parameterType="Email">  
+  insert into Email(YOUREMAIL,FORMEMAIL,MESSAGE,BEIZHU,DINGSHI,CREATETIME) values(#{youremail},#{formemail},#{message},#{beizhu},#{dingshi},#{createTime})  
+  </insert> 
+   
+   <update id="update" parameterType="Email">  
+   update Email set YOUREMAIL=#{youremai},FORMEMAIL=#{formemail},MESSAGE=#{message},BEIZHU=#{beizhu},DINGSHI=#{dingshi} where ID=#{id}
+  </update> 
+   
+  <delete id="deleteID" parameterType="int">  
+    delete from Student where ID = #{id}  
+  </delete>  
+</mapper>  
