@@ -2,4 +2,4 @@
 > 接入第三方 图灵机器人API 实现各种功能  后台动态  增加欢迎语句  关键字回复等功能
 
 ## 部分功能展示地址
-> https://mp.weixin.qq.com/s?__biz=MzAwOTUwMTk4Mw==&tempkey=OTE4XzhMejJzVWhhV0s5elVWTnExWnFlTHF1MWYzUUp3OXBjMEthVGM5N2ZfSUxpdjVVSmtkTjdHMmlpSEQ1M0QyQVQxVHFkaEYzcks1T0kwS25mS1RWT0Q3eXRtRjFxMVVHUFYzN2VyOHR0UkJYT1ZYcnlQTjg0MFFoUTJHM0d5WXZIall1a0d5RDNTS254UEF5LW5hUkt5amZwbHl0U3NZa2hvNk1Uemd%2Bfg%3D%3D&chksm=0953514c3e24d85a3d3d9bc4e1d26b9c38d1fd5cd7068270ce4c33c3f1db452c2eb9b7762543#rd
+>https://mp.weixin.qq.com/s?__biz=MzAwOTUwMTk4Mw==&mid=2651518585&idx=1&sn=c85bdf96690c5d919fa7e1e205a5895c&chksm=80a0fa09b7d7731f0829a34817c8e801708e6221ad08bc3c38d00728d3908f5d20218cece7ac#rd
